@@ -37,7 +37,7 @@ resource "azurerm_network_security_group" "nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "443" # kube-apiserver port
-    source_address_prefix      = "185.111.173.41" # replace with your public IP
+    source_address_prefix      = "" # replace with your public IP
     destination_address_prefix = "*"
   }
 
@@ -49,7 +49,7 @@ resource "azurerm_network_security_group" "nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "22"
-    source_address_prefix      = "185.111.173.41" # replace with your public IP
+    source_address_prefix      = "" # replace with your public IP
     destination_address_prefix = "*"
   }
 }
